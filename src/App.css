@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.movie {
+  height: auto;
+  width: 20rem;
+}
+
+.movie-spec {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+span {
+  font-weight: bold;
+}
+
+body {
+  margin: 50px;
+  padding: 0px;
+  box-sizing: border-box;
+}
