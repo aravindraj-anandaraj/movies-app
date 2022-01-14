@@ -1,53 +1,92 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
+import { Switch, Route, Redirect, useHistory } from 'react-router-dom';
+import { Home } from './Home';
+import { MovieList } from './MovieList';
+import { AddMovie } from './AddMovie';
+import { MovieDetails } from './MovieDetails';
+import { EditMovieDetails } from './EditMovieDetails';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import { Button } from '@mui/material';
+import { TicTacToe } from './TicTacToe';
+import { AddColor } from './AddColor';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { NotFoundHandler } from './NotFoundHandler';
+import { BasicForm } from './BasicForm';
 
 function App() {
-  const movies = [
-    {
-      title: 'The Amazing Spider-Man',
-      poster: 'https://flxt.tmsimg.com/assets/p8548776_p_v13_bc.jpg',
-      rating: '6.9/10',
-      summary: 'After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.'
-    },
-    {
-      title: 'Spider-Man: Homecoming',
-      poster: 'https://m.media-amazon.com/images/M/MV5BOGQ5YTM3YzctOTVmMC00OGIyLWFkZTYtMWYwOWZhMjA2MWMwXkEyXkFqcGdeQXVyMjUyMTE5MA@@._V1_FMjpg_UX1000_.jpg',
-      rating: '7.4/10',
-      summary: 'Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.'
-    },
-    {
-      title: 'Spider-Man',
-      poster: 'https://images.moviesanywhere.com/e84b2c6e0de5278f8a00a8fedf73d60b/367910a3-05da-4ad5-8ef3-317708a1ca48.jpg',
-      rating: '7.3/10',
-      summary: 'When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.'
-    },
-    {
-      title: 'Spider-Man: Into the Spider-Verse',
-      poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS15Qk_nERnp1yp0g_eudjbDow_39q_hbBYNqrDLOztG-tO-vGQ',
-      rating: '8.4/10',
-      summary: 'Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.'
-    }
-  ]
-  return (
-    <div className="App">
-      {movies.map(({ title, poster, rating, summary }) => (
-        <Movies title={title} poster={poster} rating={rating} summary={summary} />
-      ))}
-    </div>
-  );
-}
 
-function Movies({ title, poster, rating, summary }) {
+  const [mode, setMode] = useState("dark");
+
+  const theme = createTheme({
+    palette: {
+      mode: mode,
+    },
+  });
+
+  const history = useHistory();
+
   return (
-    <div className="movie">
-      <img src={poster} alt={title}/>
-      <div className="movie-spec">
-        <h4>{title}</h4>
-        <p>⭐<span>{rating}</span></p>
+    <ThemeProvider theme={theme}>
+      <Paper sx={{minHeight: '100vh', minWidth: '100vh', borderRadius: '0px'}} elevation={3} >
+      <div className="App">
+        <AppBar position="static" className="AppBar" color="primary">
+          <Toolbar>
+            <Button color="inherit" onClick={() => history.push('/')}>Home</Button>
+            <Button color="inherit" onClick={() => history.push('/movies')}>Movies</Button>
+            <Button color="inherit" onClick={() => history.push('/movie/add')}>Add Movies</Button>
+            <Button color="inherit" onClick={() => history.push('/films')}>Films</Button>
+            <Button color="inherit" onClick={() => history.push('/add-color')}>Add color</Button>
+            <Button color="inherit" onClick={() => history.push('/tic-tac-toe')}>TicTacToe</Button>
+            <Button 
+              sx={{ marginLeft: 'auto' }}
+              startIcon={mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+              color="inherit" 
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}>
+                {mode === "light" ? "Dark" : "Light"} Mode
+            </Button>
+          </Toolbar>
+        </AppBar>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/films">
+              <Redirect to="/movies" />
+            </Route>
+            <Route path="/movie/add">
+              <AddMovie />
+            </Route>
+            <Route path="/movies/:id">
+              <MovieDetails />
+            </Route>
+            <Route path="/movie/edit/:id">
+              <EditMovieDetails />
+            </Route>
+            <Route exact path="/movies">
+              <MovieList />
+            </Route>
+            <Route path="/add-color">
+              <AddColor />
+            </Route>
+            <Route path="/tic-tac-toe">
+              <TicTacToe />
+            </Route>
+            <Route exact path="/basic-form">
+              <BasicForm />
+            </Route>
+            <Route path="**">
+              <NotFoundHandler />
+            </Route>
+          </Switch>
       </div>
-      <p><span>Summary : </span>{summary}</p>
-    </div>
-  )
+      </Paper>
+    </ThemeProvider>
+  );
 }
 
 export default App;

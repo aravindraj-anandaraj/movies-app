@@ -1,0 +1,74 @@
+[
+  {
+    "id": "100",
+    "title": "Spider-Man",
+    "poster": "https://images.moviesanywhere.com/e84b2c6e0de5278f8a00a8fedf73d60b/367910a3-05da-4ad5-8ef3-317708a1ca48.jpg",
+    "rating": "7.3",
+    "summary": "When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.",
+    "trailer": "https://www.youtube.com/embed/Lko8OP9_AjQ"
+  },
+  {
+    "id": "101",
+    "title": "Spider-Man 2",
+    "poster": "https://vistapointe.net/images/spiderman-2-wallpaper-2.jpg",
+    "rating": "7.3",
+    "summary": "Peter Parker is dissatisfied with life when he loses his job, the love of his life, Mary Jane, and his powers. Amid all the chaos, he must fight Doctor Octavius who threatens to destroy New York City.",
+    "trailer": "https://www.youtube.com/embed/1s9Yln0YwCw"
+  },
+  {
+    "id": "102",
+    "title": "Spider-Man 3",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmyRssPp6QwNUa0mgR96064m8x_52mrahSLn8Mtl1YYQYS_Yuf",
+    "rating": "6.2",
+    "summary": "Peter Parker becomes one with a symbiotic alien that bolsters his Spider-Man avatar and affects his psyche. He also has to deal with Sandman and maintain a fragmented relationship with Mary Jane.",
+    "trailer": "https://www.youtube.com/embed/UhSSiFELmIY"
+  },
+  {
+    "id": "103",
+    "title": "The Amazing Spider-Man",
+    "poster": "https://www.teahub.io/photos/full/6-67898_high-resolution-movie-the-amazing-spiderman-wallpaper-amazing.jpg",
+    "rating": "6.9",
+    "summary": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.",
+    "trailer": "https://www.youtube.com/embed/upwf8RsyNqQ"
+  },
+  {
+    "id": "104",
+    "title": "The Amazing Spider-Man 2",
+    "poster": "https://lylesmoviefiles.com/wp-content/uploads/2013/12/the-amazing-spider-man-2-spider-man-vs-electro-e1537450464110.jpg",
+    "rating": "6.5",
+    "summary": "Spider-Man embarks on a mission to protect his loved ones when OsCorp, owned by his childhood friend Harry Osborn, unleashes a slew of genetically-modified villains against him.",
+    "trailer": "https://www.youtube.com/embed/nbp3Ra3Yp74"
+  },
+  {
+    "id": "105",
+    "title": "Spider-Man: Homecoming",
+    "poster": "https://c4.wallpaperflare.com/wallpaper/317/113/241/4k-spider-man-homecoming-iron-man-vulture-wallpaper-preview.jpg",
+    "rating": "7.4",
+    "summary": "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man, and finds himself on the trail of a new menace prowling the skies of New York City.",
+    "trailer": "https://www.youtube.com/embed/rk-dF1lIbIg"
+  },
+  {
+    "id": "106",
+    "title": "Spider-Man: Far from Home",
+    "poster": "https://avatarfiles.alphacoders.com/192/192964.jpg",
+    "rating": "7.4",
+    "summary": "Peter Parker, the beloved superhero Spider-Man, faces four destructive elemental monsters while on holiday in Europe. Soon, he receives help from Mysterio, a fellow hero with mysterious origins.",
+    "trailer": "https://www.youtube.com/embed/DYYtuKyMtY8"
+  },
+  {
+    "id": "107",
+    "title": "Spider-Man: No Way Home",
+    "poster": "https://images.thedirect.com/media/article_full/spider-man-movies-ranked.jpg?imgeng=cmpr_75/",
+    "rating": "9.2",
+    "summary": "With Spider-Man's identity now revealed, our friendly neighborhood web-slinger is unmasked and no longer able to separate his normal life as Peter Parker from the high stakes of being a superhero. When Peter asks for help from Doctor Strange, the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.",
+    "trailer": "https://www.youtube.com/embed/ZYzbalQ6Lg8"
+  },
+  {
+    "id": "108",
+    "title": "Spider-Man: Into the Spider-Verse",
+    "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS15Qk_nERnp1yp0g_eudjbDow_39q_hbBYNqrDLOztG-tO-vGQ",
+    "rating": "8.4",
+    "summary": "Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.",
+    "trailer": "https://www.youtube.com/embed/g4Hbz2jLxvQ"
+  }
+]
